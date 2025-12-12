@@ -75,5 +75,10 @@ sequenceDiagram
     - Relays heavy processing requests (like mapping generation) to the Backend API.
 - **Content Script**:
     - **`FieldExtractor`**: Scans the DOM to find inputs, selects, and textareas. Generates stable IDs for elements.
-    - **`FieldAutoFiller`**: Receives mapping data and intelligently fills fields, handling shadow DOM and event dispatching (React/Vue support).
+    - **`FieldAutoFiller`**: Receives mapping data and intelligently fills fields, handling shadow DOM and event dispatching (React).
     - **`DOMObserver`**: Watches for dynamic changes in the page to re-index fields if the form updates.
+
+  - **TODO**
+    - **`FieldAutoFiller Updation`** : Currently I am not able to use it for Select, lists, date fields
+    - **`RAG Pipeline`** : Users Data could be stored in Vector DB for optimisation of Model Context.
+    - **`Testing`** :  Testing for all types of forms any dumb user can make.
