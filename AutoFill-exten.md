@@ -10,7 +10,7 @@ The backend is built on Cloudflare Workers using `itty-router` for handling API 
 
 ```mermaid
 graph LR
-    Ext[Extension] -->|HTTP POST| Router[Router (Worker)]
+    Ext[Extension] -->|HTTP POST| Router["Router (Worker)"]
     
     subgraph Handlers
         Router -->|/api/extract-fields| HE[Handle Extract Fields]
@@ -43,9 +43,9 @@ The extension operates via a coordination of three main contexts: Popup (UI), Ba
 
 ```mermaid
 sequenceDiagram
-    participant P as Popup (UI)
-    participant B as Background (MessageHandler)
-    participant C as Content Script (Page)
+    participant P as "Popup (UI)"
+    participant B as "Background (MessageHandler)"
+    participant C as "Content Script (Page)"
     
     Note over P, C: 1. Field Extraction
     P->>B: GET_FIELDS
